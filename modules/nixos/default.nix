@@ -6,9 +6,9 @@
     ./base
     ./network
     ./sound
-    ./keyring
     ./greetd
     ./hardware
+    # ./keyring
     # ./qemu
     # ./thunar # A GUI file manager
     # ./steam

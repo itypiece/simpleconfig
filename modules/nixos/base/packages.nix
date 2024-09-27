@@ -24,4 +24,7 @@
 
   programs.hyprland.enable = true;
 
+  # make hyprlock works normally
+
+  security.pam.services.hyprlock = {};
 }

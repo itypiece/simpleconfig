@@ -5,6 +5,7 @@
 
 Type `sudo -i` to login root.
 
+
 2. Connect to the Internet
 
 For wired connection, just plug in the network cable.
@@ -30,6 +31,8 @@ OK
 enable_network 0
 OK
 ```
+
+
 3. Partition
 
 My configuration uses systemd-boot, so it only supports UEFI computers. If you want to know whether it is an EFI-booted system, please enter
@@ -59,6 +62,7 @@ mkfs.vfat -n boot /dev/nvme0n1p1 # Format the efi partition
 mkfs.btrfs -L arch /dev/nvme0n1p2 # Format the root directory as btrfs file system
 ```
 
+
 4. Mount
 
 ```
@@ -70,6 +74,7 @@ mkdir -p /mnt/nix/persist/etc/nixos
 mount -o bind /mnt/nix/persist/etc/nixos /mnt/etc/nixos
 ```
 Here we mount the system to the memory, so that it will remain the same every time the computer restarts. This is a very interesting usage, which can prevent junk files and failures on your computer. If you want to ensure that the data in a certain folder will not disappear after restarting, please modify `modules/nixos/hardware/persistence.nix`.
+
 
 5. Install the system
 

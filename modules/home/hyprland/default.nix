@@ -145,6 +145,8 @@
         "$mod SHIFT, R , exec , wf-recorder -g \"$(slurp)\" --audio --file=$HOME/Videos/$(date '+%Y_%m_%d_%H_%M_%S').mp4"
 
         "$mod      , L , exec , hyprlock"
+        "$mod      , T , exec , killall wf-recorder"
+
         # Dwindle Keybind
         "$mod , k , movefocus , u"
         "$mod , j , movefocus , d"

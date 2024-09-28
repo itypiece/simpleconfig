@@ -14,6 +14,7 @@
         "Music"
         "Pictures"
         "Documents"
+        "Videos"
         ".mozilla"
         ".ssh"
         ".gnupg"

@@ -68,7 +68,7 @@ mkfs.btrfs -L arch /dev/nvme0n1p2 # Format the root directory as btrfs file syst
 ```
 mount -t tmpfs none /mnt
 mkdir -p /mnt/{boot,nix,etc/nixos}
-mount /dev/disk/by-lebal/nixos /mnt/nix
+mount /dev/disk/by-label/nixos /mnt/nix
 mount /dev/disk/by-label/boot /mnt/boot
 mkdir -p /mnt/nix/persist/etc/nixos
 mount -o bind /mnt/nix/persist/etc/nixos /mnt/etc/nixos
@@ -85,7 +85,7 @@ nixos-generate-config --root /mnt # We generated a basic configuration file, how
 
 cd /mnt/etc/nixos
 git clone https://github.com/itypiece/simpleconfig
-cp /mnt/etc/nixos/hardware-configuraion.nix /mnt/etc/nixos/simpleconfig/nixos/hardware/hardware-configuration.nix
+cp /mnt/etc/nixos/hardware-configuration.nix /mnt/etc/nixos/simpleconfig/nixos/hardware/hardware-configuration.nix
 cd simpleconfig
 
 # The username and host name can be changed in flake.nix. The default user password is 1.

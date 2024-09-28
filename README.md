@@ -59,7 +59,7 @@ parted /dev/nvme0n1 -- set 1 esp on # Set EFI system partition (ESP)
 
 ```
 mkfs.vfat -n boot /dev/nvme0n1p1 # Format the efi partition
-mkfs.btrfs -L arch /dev/nvme0n1p2 # Format the root directory as btrfs file system
+mkfs.btrfs -L nixos /dev/nvme0n1p2 # Format the root directory as btrfs file system
 ```
 
 

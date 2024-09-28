@@ -7,6 +7,5 @@
     shellAliases = {
       "osclean" = "sudo nix profile wipe-history --profile /nix/var/nix/profiles/system && sudo nix store gc --debug";
     };
-    shellOptions = [ "extglob" ];
   };
 }

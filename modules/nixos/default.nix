@@ -8,7 +8,7 @@
     ./sound
     ./greetd
     ./hardware
-    # ./keyring
+    ./keyring
     # ./qemu
     # ./thunar # A GUI file manager
     # ./steam

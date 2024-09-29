@@ -3,7 +3,7 @@
 {
   home.packages = [
     (pkgs.vesktop.overrideAttrs (old: {
-      patches = (old.patches or [ ]) ++ [ ./__readonlyFix.patch ];
+      patches = (old.patches or [ ]) ++ [ ./readonlyFix.patch ];
       postFixup =
         old.postFixup
         + ''

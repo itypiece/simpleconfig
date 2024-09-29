@@ -1,6 +1,6 @@
 {
   imports = [
-    ./__color.nix
-    ./__desktop.nix
+    ./color.nix
+    ./desktop.nix
   ];
 }

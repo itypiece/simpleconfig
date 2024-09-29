@@ -1,5 +1,9 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
+  imports = [
+    inputs.hyprcursor-phinger.homeManagerModules.hyprcursor-phinger
+  ];
+
   gtk = {
     enable = true;
     theme = {
@@ -19,18 +23,13 @@
       name = "WhiteSur-dark";
       package = pkgs.whitesur-icon-theme;
     };
-
-    cursorTheme = {
-      name = "Bibata-Modern-Ice";
-      size = 24;
-      package = pkgs.bibata-cursors;
-    };
   };
 
   home.pointerCursor = {
-    name = "Bibata-Modern-Ice";
-    size = 24;
-    package = pkgs.bibata-cursors;
+    name = "phinger-cursors-light";
+    package = pkgs.phinger-cursors;
+    size = 22;
+    gtk.enable = true;
   };
-
+  programs.hyprcursor-phinger.enable = true;
 }

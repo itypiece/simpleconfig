@@ -26,5 +26,6 @@
 
   # make hyprlock works normally
 
-  security.pam.services.hyprlock = {};
+  programs.fish.enable = true;
+  security.pam.services.hyprlock = { };
 }

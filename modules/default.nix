@@ -1,4 +1,4 @@
-{ username, ... }:
+{ username, inputs, ... }:
 {
   imports = [
     ./nixos
@@ -8,6 +8,9 @@
     useUserPackages = true;
     useGlobalPkgs = true;
     backupFileExtension = "bak";
+    extraSpecialArgs = {
+      inherit inputs;
+    };
     users.${username} = import ./home;
   };
 }

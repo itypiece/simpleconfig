@@ -4,15 +4,13 @@
 }:
 {
   imports = [
-    ./__hyprpaper.nix
-    ./__hyprpaper.nix
+    ./hyprpaper.nix
+    ./hyprpaper.nix
   ];
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = true;
-    # xwayland = {
-    #   enable = true;
-    #  };
+    # xwayland.enable = false;
     settings = {
       exec-once = [
         "hyprpaper"
@@ -128,20 +126,17 @@
 
       "$mod" = "SUPER";
       bind = [
-        "$mod SHIFT, C , exit ,"
-        "$mod      , Q, togglespecialworkspace"
-        "$mod SHIFT, Q, movetoworkspace, special"
+        "$mod      , C , killactive ,"
         "$mod      , F , fullscreen , 0"
         "$mod      , R , exec , fuzzel -I"
         "$mod      , Space , togglefloating ,"
         "$mod SHIFT, T , togglegroup ,"
         "$mod SHIFT, J , changegroupactive, f"
         "$mod SHIFT, K , changegroupactive, b"
-        "$mod      , W , killactive ,"
         "$mod      , P , exec , wlogout"
         "$mod      , Return , exec , foot"
 
-        "$mod SHIFT, S , exec , grim-g \"$(slurp)\" $HOME/Pictures/$(date '+%Y_%m_%d_%H_%M_%S').png"
+        "$mod SHIFT, S , exec , grim -g \"$(slurp)\" $HOME/Pictures/$(date '+%Y_%m_%d_%H_%M_%S').png"
         "$mod SHIFT, R , exec , wf-recorder -g \"$(slurp)\" --audio --file=$HOME/Videos/$(date '+%Y_%m_%d_%H_%M_%S').mp4"
 
         "$mod      , L , exec , hyprlock"

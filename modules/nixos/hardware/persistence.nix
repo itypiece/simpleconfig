@@ -1,11 +1,12 @@
 { username, ... }:
 {
   environment.persistence."/nix/persist" = {
+    hideMounts = true;
     directories = [
-      "/etc/nixos"
       "/var/lib"
       "/var/log"
-      "/tmp"
+      "/etc/NetworkManager/system-connections"
+      "/etc/nixos"
     ];
     files = [ "/etc/machine-id" ];
     users.${username} = {
@@ -15,6 +16,8 @@
         "Pictures"
         "Documents"
         "Videos"
+        ".local"
+        ".config"
         ".mozilla"
         ".ssh"
         ".gnupg"

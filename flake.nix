@@ -7,6 +7,11 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     impermanence.url = "github:nix-community/impermanence";
 
+    hyprcursor-phinger.url = "github:jappie3/hyprcursor-phinger";
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # For command-not-found
     programsdb = {
       url = "github:wamserma/flake-programs-sqlite";

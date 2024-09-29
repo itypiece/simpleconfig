@@ -80,27 +80,20 @@
   services = {
     # Service that makes Out of Memory Killer more effective
     earlyoom.enable = true;
-    dbus.packages = [ pkgs.gcr ];
     timesyncd.enable = true;
     # Enable periodic SSD TRIM of mounted partitions in background
     fstrim.enable = true;
-    tlp = {
-      enable = true;
-      settings = {
-        CPU_SCALING_GOVERNOR_ON_AC = "performance";
-        CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
-      };
-    };
     logind = {
       powerKey = "suspend";
       lidSwitch = "suspend-then-hibernate";
     };
   };
+
   documentation = {
     enable = false;
     doc.enable = false;
     nixos.enable = false;
-    man.enable = true;
+    man.enable = false;
     dev.enable = false;
   };
 

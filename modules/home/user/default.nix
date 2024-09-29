@@ -12,10 +12,18 @@
     wf-recorder
     ponymix
     slurp
-    playerctl
   ];
 
   home.sessionVariables = {
     NIXOS_OZONE_WL = "1";
+    NIXPKGS_ALLOW_UNFREE = "1";
+    EDITOR = "nvim";
+    VISUAL = "nvim";
+    TERM = "xterm-256color";
+    BROWSER = "firefox";
+    QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
+    QT_QPA_PLATFORM = "wayland";
+    SDL_VIDEODRIVER = "wayland";
+    XDG_SESSION_TYPE = "wayland";
   };
 }

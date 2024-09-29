@@ -6,8 +6,8 @@
       id = 0;
       isDefault = true;
       name = "alice";
-      search = import ./__search.nix;
-      settings = import ./__settings.nix;
+      search = import ./search.nix;
+      settings = import ./settings.nix;
       userChrome = ''
         #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]
           #sidebar-header {

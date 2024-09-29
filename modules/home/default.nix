@@ -1,6 +1,5 @@
 {
   imports = [
-    ./discord
     ./foot
     ./hyprland
     ./mako
@@ -13,7 +12,10 @@
     ./mpv
     ./ssh
     ./git
+    ./playerctld
+    ./fish
     ./user
+    # discord
   ];
 
   home.stateVersion = "24.11";

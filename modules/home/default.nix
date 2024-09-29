@@ -15,6 +15,7 @@
     ./fish
     ./user
     ./gpg
+    # ./emacs
     # ./mpv
     # ./discord
   ];

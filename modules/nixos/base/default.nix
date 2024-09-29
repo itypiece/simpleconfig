@@ -20,6 +20,8 @@
   programs.command-not-found.dbPath =
     inputs.programsdb.packages.${pkgs.stdenv.hostPlatform.system}.programs-sqlite;
 
+  nixpkgs.config.allowUnfree = true;
+
   nix = {
     nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
     channel.enable = false;

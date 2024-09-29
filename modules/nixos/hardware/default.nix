@@ -3,7 +3,7 @@
     ./hardware-configuration.nix
     ./boot.nix
     ./persistence.nix
-    # ./nvidia
+    # ./nvidia.nix
     # ./bluetooth.nix
   ];
 }

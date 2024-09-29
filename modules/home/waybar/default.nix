@@ -94,7 +94,7 @@
         "layer" = "top"; # Waybar at top layer
         "position" = "top";
         # "height" = 18;
-        "modules-left" = [ "hyprland/workspaces" ];
+        "modules-left" = [ "sway/workspaces" ];
         "modules-right" = [
           # "cpu"
           # "memory"
@@ -142,13 +142,13 @@
           "interval" = 5;
         };
         "pulseaudio" = {
-          "format" = "{icon} {volume}% {format_source}";
-          "format-muted" = "󰖁 {format_source}";
-          "format-bluetooth" = "{icon}󰂯 {volume}% {format_source}";
-          "format-bluetooth-muted" = "󰖁󰂯 {format_source}";
+          "format" = "{icon} {volume}%";
+          "format-muted" = "󰖁 ";
+          "format-bluetooth" = "{icon}󰂯 {volume}%";
+          "format-bluetooth-muted" = "󰖁󰂯 ";
 
-          "format-source" = "󰍬 {volume}%";
-          "format-source-muted" = "󰍭";
+         # "format-source" = "󰍬 {volume}%";
+         # "format-source-muted" = "󰍭";
 
           "format-icons" = {
             "headphones" = "󰋋";

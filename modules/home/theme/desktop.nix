@@ -5,18 +5,17 @@
   gtk = {
     enable = true;
     theme = {
-      name = "catppuccin-mocha-mauve-compact+rimless,black";
+      name = "catppuccin-macchiato-rosewater-compact+rimless,black";
       package = pkgs.catppuccin-gtk.override {
-        accents = [ "mauve" ];
+        accents = [ "rosewater" ];
         size = "compact";
         tweaks = [
           "rimless"
           "black"
         ];
-        variant = "mocha";
+        variant = "macchiato";
       };
     };
-
     iconTheme = {
       name = "WhiteSur-dark";
       package = pkgs.whitesur-icon-theme;

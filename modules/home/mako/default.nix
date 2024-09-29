@@ -12,7 +12,8 @@
     height = 100;
     width = 300;
     format = "<b>%s</b>\\n%b";
-
+    backgroundColor = "#303030FF";
+    borderColor = "#333333FF";
     extraConfig = ''
       [urgency=low]
       default-timeout=3000

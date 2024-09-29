@@ -134,7 +134,7 @@
           "format" = "󰍛 {used:0.1f}G";
         };
         "network" = {
-          "format-wifi" = "   {essid}";
+          "format-wifi" = "  {essid}";
           "format-ethernet" = "󰈀 IP Leaked: {ipaddr}/{cidr}";
           "format-linked" = "{ifname} (No IP)";
           "format-disconnected" = "Disconnected ⚠";

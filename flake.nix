@@ -2,12 +2,11 @@
   description = "Nixos configuration";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     impermanence.url = "github:nix-community/impermanence";
     hyprcursor-phinger.url = "github:jappie3/hyprcursor-phinger";
     home-manager = {
-      # change to github:nix-community/home-manager for unstable
-      url = "github:nix-community/home-manager/release-24.05";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-index-database = {

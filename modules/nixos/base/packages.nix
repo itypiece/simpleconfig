@@ -19,10 +19,16 @@
     greetd.gtkgreet
   ];
 
-  programs.hyprland.enable = true;
+  # programs.hyprland.enable = true;
 
   # make hyprlock works normally
 
+  programs = {
+    sway = {
+      enable = true;
+      wrapperFeatures.gtk = true;
+    };
+  };
   programs.fish.enable = true;
   security.pam.services.hyprlock = { };
 }

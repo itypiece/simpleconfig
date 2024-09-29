@@ -1,7 +1,8 @@
 {
   imports = [
     ./foot
-    ./hyprland
+    # ./hyprland
+    ./sway
     ./mako
     ./theme
     ./waybar

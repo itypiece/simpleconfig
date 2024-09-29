@@ -92,7 +92,7 @@
     settings = {
       mainBar = {
         "layer" = "top"; # Waybar at top layer
-        "position" = "bottom";
+        "position" = "top";
         # "height" = 18;
         "modules-left" = [ "hyprland/workspaces" ];
         "modules-right" = [

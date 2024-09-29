@@ -121,7 +121,7 @@
 
       "$mod" = "SUPER";
       bind = [
-        "$mod      , C , killactive ,"
+        "$mod SHIFT, C , killactive ,"
         "$mod      , F , fullscreen , 0"
         "$mod      , R , exec , fuzzel -I"
         "$mod      , Space , togglefloating ,"
@@ -129,7 +129,7 @@
         "$mod SHIFT, J , changegroupactive, f"
         "$mod SHIFT, K , changegroupactive, b"
         "$mod      , P , exec , wlogout"
-        "$mod      , Return , exec , foot"
+        "$mod SHIFT, Return , exec , foot"
 
         "$mod SHIFT, S , exec , grim -g \"$(slurp)\" $HOME/Pictures/$(date '+%Y_%m_%d_%H_%M_%S').png"
         "$mod SHIFT, R , exec , wf-recorder -g \"$(slurp)\" --audio --file=$HOME/Videos/$(date '+%Y_%m_%d_%H_%M_%S').mp4"

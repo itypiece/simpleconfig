@@ -9,13 +9,14 @@
     ./firefox
     ./neovim
     ./bash
-    ./mpv
     ./ssh
     ./git
     ./playerctld
     ./fish
     ./user
-    # discord
+    ./gpg
+    # ./mpv
+    # ./discord
   ];
 
   home.stateVersion = "24.05";

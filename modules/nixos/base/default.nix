@@ -7,9 +7,7 @@
   ...
 }:
 {
-  imports = [
-    ./packages.nix
-  ];
+  imports = [ ./packages.nix ];
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
 

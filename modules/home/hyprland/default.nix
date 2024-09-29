@@ -1,7 +1,4 @@
-{
-  pkgs,
-  ...
-}:
+{ pkgs, ... }:
 {
   imports = [
     ./hyprpaper.nix
@@ -17,9 +14,7 @@
         "wl-paste --type text --watch cliphist store"
       ];
 
-      monitor = [
-        ",highrr,auto,1"
-      ];
+      monitor = [ ",highrr,auto,1" ];
 
       animations = {
         enabled = true;

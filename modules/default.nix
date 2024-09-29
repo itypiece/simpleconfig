@@ -1,8 +1,6 @@
 { username, inputs, ... }:
 {
-  imports = [
-    ./nixos
-  ];
+  imports = [ ./nixos ];
 
   home-manager = {
     useUserPackages = true;

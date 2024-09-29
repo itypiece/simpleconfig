@@ -2,7 +2,6 @@
 {
   programs.neovim = {
     enable = true;
-    package = pkgs.neovim-unwrapped;
 
     # withNodeJs = true;
     # withPython3 = true;

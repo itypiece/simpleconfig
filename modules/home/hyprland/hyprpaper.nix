@@ -8,9 +8,7 @@
 
       preload = [ "${./wallpaper.png}" ];
 
-      wallpaper = [
-        "monitor,${./wallpaper.png}"
-      ];
+      wallpaper = [ "monitor,${./wallpaper.png}" ];
     };
   };
 }

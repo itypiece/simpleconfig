@@ -10,9 +10,7 @@
           sponsorblock
         ];
 
-        mpv = pkgs.mpv-unwrapped.override {
-          waylandSupport = true;
-        };
+        mpv = pkgs.mpv-unwrapped.override { waylandSupport = true; };
       }
     );
 

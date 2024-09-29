@@ -1,8 +1,6 @@
 { pkgs, inputs, ... }:
 {
-  imports = [
-    inputs.hyprcursor-phinger.homeManagerModules.hyprcursor-phinger
-  ];
+  imports = [ inputs.hyprcursor-phinger.homeManagerModules.hyprcursor-phinger ];
 
   gtk = {
     enable = true;

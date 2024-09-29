@@ -1,8 +1,4 @@
-{
-  pkgs,
-  lib,
-  ...
-}:
+{ pkgs, lib, ... }:
 {
   programs.waybar = {
     enable = true;
@@ -98,9 +94,7 @@
         "layer" = "top"; # Waybar at top layer
         "position" = "bottom";
         # "height" = 18;
-        "modules-left" = [
-          "hyprland/workspaces"
-        ];
+        "modules-left" = [ "hyprland/workspaces" ];
         "modules-right" = [
           # "cpu"
           # "memory"

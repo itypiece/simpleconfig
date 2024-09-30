@@ -5,6 +5,7 @@
     ./mako
     ./theme
     ./waybar
+    ./swayosd
     ./fuzzel
     ./firefox
     ./neovim

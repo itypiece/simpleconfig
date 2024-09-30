@@ -3,11 +3,12 @@
   imports = [
     ./hyprpaper.nix
     ./hyprlock.nix
+    ./hypridle.nix
   ];
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = true;
-    # xwayland.enable = false;
+    xwayland.enable = true;
     settings = {
       exec-once = [
         "hyprpaper"
@@ -15,30 +16,16 @@
       ];
 
       monitor = [ ",highrr,auto,1,bitdepth,10" ];
-      gestures = {
-        workspace_swipe = true;
-      };
       animations = {
         enabled = true;
-
-        bezier = [ "myBezier, 0.05, 0.9, 0.1, 1.05" ];
-
+        bezier = "myBezier, 0.16, 1, 0.3, 1";
         animation = [
           "windows, 1, 7, myBezier"
-          "windowsOut, 1, 7, default, popin 80%"
-          "windowsMove, 1, 2, default, popin 80%"
-          "border, 1, 10, default"
-          "borderangle, 1, 8, default"
-          "fade, 1, 7, default"
-          "workspaces, 1, 6, default"
+          "windowsOut, 1, 7, myBezier, popin 80%"
+          "border, 1, 10, myBezier"
+          "fade, 1, 7, myBezier"
+          "workspaces, 1, 5, default"
         ];
-      };
-
-      dwindle = {
-        force_split = 2;
-        pseudotile = true;
-        preserve_split = true;
-        no_gaps_when_only = 0;
       };
 
       decoration = {
@@ -63,14 +50,18 @@
         shadow_render_power = 3;
         shadow_offset = "2 2";
       };
-
+      master = {
+        new_status = true;
+        allow_small_split = true;
+        mfact = 0.5;
+      };
       general = {
         gaps_in = 3;
         gaps_out = 3;
         border_size = 1;
         "col.active_border" = "0x30303040";
         "col.inactive_border" = "0x30303040";
-        layout = "dwindle";
+        layout = "master";
       };
 
       group = {
@@ -92,11 +83,15 @@
       };
 
       misc = {
-        disable_splash_rendering = true;
-        force_default_wallpaper = false;
-        disable_hyprland_logo = true;
         vfr = true;
-        vrr = 0;
+        disable_hyprland_logo = true;
+        disable_splash_rendering = true;
+        disable_autoreload = true;
+        focus_on_activate = true;
+        new_window_takes_over_fullscreen = 2;
+      };
+      gestures = {
+        workspace_swipe = true;
       };
 
       layerrule = [
@@ -138,7 +133,7 @@
         "$mod SHIFT, S , exec , grim -g \"$(slurp)\" $HOME/Pictures/$(date '+%Y_%m_%d_%H_%M_%S').png"
         "$mod SHIFT, R , exec , wf-recorder -g \"$(slurp)\" --audio --file=$HOME/Videos/$(date '+%Y_%m_%d_%H_%M_%S').mp4"
 
-        "$mod      , L , exec , hyprlock"
+        "$mod, L, exec, ${pkgs.hyprlock}/bin/hyprlock"
         "$mod      , T , exec , killall wf-recorder"
 
         # Dwindle Keybind

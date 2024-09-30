@@ -23,9 +23,9 @@
   };
 
   home.pointerCursor = {
+    package = inputs.hyprcursor-phinger.packages.${pkgs.stdenv.hostPlatform.system}.default;
     name = "phinger-cursors-light";
-    package = pkgs.phinger-cursors;
-    size = 22;
+    size = 24;
     gtk.enable = true;
   };
   programs.hyprcursor-phinger.enable = true;

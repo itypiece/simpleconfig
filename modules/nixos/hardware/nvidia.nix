@@ -1,5 +1,6 @@
 { config, ... }:
 {
+  hardware.graphics.enable = mkDefault true;
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia.modesetting.enable = true;
   hardware.nvidia.powerManagement.enable = true;

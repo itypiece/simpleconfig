@@ -14,7 +14,9 @@
   time.timeZone = "Asia/Shanghai";
   i18n.defaultLocale = "en_US.UTF-8";
   console.keyMap = "us";
-
+  environment.variables = {
+    "XKB_DEFAULT_LAYOUT" = "us";
+  };
   programs.command-not-found.dbPath =
     inputs.programsdb.packages.${pkgs.stdenv.hostPlatform.system}.programs-sqlite;
 

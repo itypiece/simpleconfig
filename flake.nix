@@ -34,13 +34,11 @@
         nixos =
           let
             username = "alice"; # Default password is 1, refer to ./modules/nixos/user/default.nix
-            hostname = "nixos";
-            platform = "x86_64-linux";
           in
           nixpkgs.lib.nixosSystem {
-            system = "${platform}";
+            system = "x86_64-linux";
             specialArgs = {
-              inherit inputs hostname username;
+              inherit inputs username;
             };
             modules = [
               home-manager.nixosModules.home-manager

@@ -135,6 +135,7 @@
 
         "$mod, L, exec, ${pkgs.hyprlock}/bin/hyprlock"
         "$mod      , T , exec , killall wf-recorder"
+        "$mod SHIFT, V , exec , cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"
 
         # Dwindle Keybind
         "$mod , k , movefocus , u"

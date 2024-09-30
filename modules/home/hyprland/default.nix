@@ -2,7 +2,7 @@
 {
   imports = [
     ./hyprpaper.nix
-    ./hyprpaper.nix
+    ./hyprlock.nix
   ];
   wayland.windowManager.hyprland = {
     enable = true;
@@ -14,8 +14,10 @@
         "wl-paste --type text --watch cliphist store"
       ];
 
-      monitor = [ ",highrr,auto,1" ];
-
+      monitor = [ ",highrr,auto,1,bitdepth,10" ];
+      gestures = {
+        workspace_swipe = true;
+      };
       animations = {
         enabled = true;
 
@@ -40,13 +42,13 @@
       };
 
       decoration = {
-        rounding = 0;
+        rounding = 7;
 
         dim_inactive = false;
         dim_strength = 0.7;
 
         blur = {
-          enabled = false;
+          enabled = true;
           size = 2;
           passes = 2;
           vibrancy = 0.4;
@@ -65,8 +67,9 @@
       general = {
         gaps_in = 3;
         gaps_out = 3;
-        border_size = 2;
-
+        border_size = 1;
+        "col.active_border" = "0x30303040";
+        "col.inactive_border" = "0x30303040";
         layout = "dwindle";
       };
 
@@ -91,6 +94,7 @@
       misc = {
         disable_splash_rendering = true;
         force_default_wallpaper = false;
+        disable_hyprland_logo = true;
         vfr = true;
         vrr = 0;
       };
@@ -180,11 +184,12 @@
       ];
 
       binde = [
-        ", XF86AudioRaiseVolume , exec , ${pkgs.alsa-utils}/bin/amixer -q set Master 5%+"
-        ", XF86AudioLowerVolume , exec , ${pkgs.alsa-utils}/bin/amixer -q set Master 5%-"
-
-        ", XF86MonBrightnessUp , exec , ${pkgs.brightnessctl}/bin/brightnessctl set 5%+"
-        ", XF86MonBrightnessDown , exec , ${pkgs.brightnessctl}/bin/brightnessctl set 5%-"
+        ", XF86AudioRaiseVolume , exec , ${pkgs.swayosd}/bin/swayosd-client --output-volume raise"
+        ", XF86AudioLowerVolume , exec , ${pkgs.swayosd}/bin/swayosd-client --output-volume lower"
+        ", XF86AudioMute , exec , ${pkgs.swayosd}/bin/swayosd-client --output-volume mute-toggle"
+        ", XF86AudioMicMute , exec , ${pkgs.swayosd}/bin/swayosd-client --input-volume mute-toggle"
+        ", XF86MonBrightnessUp , exec , ${pkgs.swayosd}/bin/swayosd-client  --brightness raise"
+        ", XF86MonBrightnessDown , exec , ${pkgs.swayosd}/bin/swayosd-client  --brightness lower"
       ];
 
       bindm = [

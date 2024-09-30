@@ -1,8 +1,7 @@
 {
   imports = [
     ./foot
-    # ./hyprland
-    ./sway
+    ./hyprland
     ./mako
     ./theme
     ./waybar
@@ -16,8 +15,8 @@
     ./fish
     ./user
     ./gpg
+    ./mpv
     # ./emacs
-    # ./mpv
     # ./discord
   ];
 

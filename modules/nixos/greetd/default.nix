@@ -7,12 +7,10 @@
 {
   security = {
     pam.services.greetd.enableGnomeKeyring = true;
-    pam.services.swaylock.text = "auth include login";
   };
 
   environment = {
     etc."greetd/environments".text = ''
-      sway
       Hyprland
     '';
   };

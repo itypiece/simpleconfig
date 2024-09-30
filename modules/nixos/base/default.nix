@@ -9,8 +9,6 @@
 {
   imports = [ ./packages.nix ];
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-
   users.mutableUsers = lib.mkDefault false;
 
   time.timeZone = "Asia/Shanghai";

@@ -9,7 +9,7 @@
 {
   imports = [ ./packages.nix ];
 
-  users.mutableUsers = lib.mkDefault false;
+  # users.mutableUsers = lib.mkDefault false;
 
   time.timeZone = "Asia/Shanghai";
   i18n.defaultLocale = "en_US.UTF-8";
@@ -17,8 +17,8 @@
   environment.variables = {
     "XKB_DEFAULT_LAYOUT" = "us";
   };
-  programs.command-not-found.dbPath =
-    inputs.programsdb.packages.${pkgs.stdenv.hostPlatform.system}.programs-sqlite;
+  #  programs.command-not-found.dbPath =
+  #    inputs.programsdb.packages.${pkgs.stdenv.hostPlatform.system}.programs-sqlite;
 
   nixpkgs.config.allowUnfree = true;
 
@@ -93,7 +93,7 @@
     enable = false;
     doc.enable = false;
     nixos.enable = false;
-    man.enable = false;
+    man.enable = true;
     dev.enable = false;
   };
 

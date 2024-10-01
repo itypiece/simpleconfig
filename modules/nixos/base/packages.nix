@@ -16,9 +16,14 @@
     coreutils
     whois
     curl
+    gvfs
+    ffmpeg
     greetd.gtkgreet
   ];
 
-  programs.hyprland.enable = true;
+  programs.sway = {
+    enable = true;
+    wrapperFeatures.gtk = true;
+  };
   programs.fish.enable = true;
 }

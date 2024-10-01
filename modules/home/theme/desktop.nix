@@ -1,7 +1,5 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 {
-  imports = [ inputs.hyprcursor-phinger.homeManagerModules.hyprcursor-phinger ];
-
   gtk = {
     enable = true;
     theme = {
@@ -23,10 +21,9 @@
   };
 
   home.pointerCursor = {
-    package = inputs.hyprcursor-phinger.packages.${pkgs.stdenv.hostPlatform.system}.default;
-    name = "phinger-cursors-light";
+    name = "Bibata-Modern-Ice";
     size = 24;
+    package = pkgs.bibata-cursors;
     gtk.enable = true;
   };
-  programs.hyprcursor-phinger.enable = true;
 }

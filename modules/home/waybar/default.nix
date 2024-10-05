@@ -104,9 +104,9 @@
         # "height" = 18;
         "modules-left" = [
           "custom/launcher"
-          "hyprland/workspaces"
+          "sway/workspaces"
         ];
-        "modules-center" = [ "hyprland/window" ];
+        "modules-center" = [ "sway/window" ];
         "modules-right" = [
           # "cpu"
           # "memory"
@@ -124,7 +124,7 @@
           "on-click-right" = "fuzzel -I";
         };
 
-        "hyprland/workspaces" = {
+        "sway/workspaces" = {
           "all-outputs" = true;
           "format" = "{icon}";
           "on-click" = "activate";
@@ -144,7 +144,7 @@
             "default" = "󰝥";
           };
         };
-        "hyprland/window" = {
+        "sway/window" = {
           "format" = "{}";
           "rewrite" = {
             "(.*) - fish" = "> [$1]";
